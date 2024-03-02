@@ -47,7 +47,7 @@ const App : FC = () =>{
       groupName: "II.Kationosztály",
       groupChildren: [
         {
-          groupChildName: "AsO<sub>3</sub><sup>3-</sup>/As<sup>3+</sup>"
+          groupChildName: "AsO<sub>3</sub><sup>3-</sup>/<sup>3+</sup>"
         },
       ]
     },
