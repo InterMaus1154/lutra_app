@@ -2,15 +2,6 @@ import {ChangeEvent, FC, useState} from 'react';
 import './App.css';
 
 
-const Select : FC = () =>{
-  return(
-    <select>
-
-    </select>
-  );
-};
-
-
 
 
 const App : FC = () =>{
@@ -30,47 +21,90 @@ const App : FC = () =>{
 
   const DEFAULT_GROUPS : IGroup[] = [
     {
-      groupName: "A",
+      groupName: "I.Kationosztály",
       groupChildren: [
         {
-          groupChildName: "A1"
+          groupChildName: "Ag<sup>+</sup>"
         },
         {
-          groupChildName: "A2"
+          groupChildName: "Pb<sup>2+</sup>"
         },
         {
-          groupChildName: "A3"
+          groupChildName: "Hg<sup>2+</sup>"
+        } ,
+        {
+          groupChildName: "Cu<sup>2+</sup>"
+        },
+        {
+          groupChildName: "Cd<sup>2+</sup>"
+        },
+        {
+          groupChildName: "Bi<sup>3+</sup>"
         }
       ]
     },
     {
-      groupName: "B",
+      groupName: "II.Kationosztály",
       groupChildren: [
         {
-          groupChildName: "B1"
+          groupChildName: "AsO<sub>3</sub><sup>3-</sup>/<sup>3+</sup>"
+        },
+      ]
+    },
+    {
+      groupName: "III.Kationosztály",
+      groupChildren: [
+        {
+          groupChildName: "Ni<sup>2+</sup>"
         },
         {
-          groupChildName: "B2"
+          groupChildName: "Co<sup>2+</sup>"
         },
         {
-          groupChildName: "B3"
+          groupChildName: "Fe<sup>2+</sup>"
+        },
+        {
+          groupChildName: "Fe<sup>3+</sup>"
+        },
+        {
+          groupChildName: "Mn<sup>2+</sup>"
+        },
+        {
+          groupChildName: "Cr<sup>3+</sup>"
+        },
+        {
+          groupChildName: "Zn<sup>2+</sup>"
+        },
+        {
+          groupChildName: "Al<sup>3+</sup>"
         }
       ]
     },
     {
-      groupName: "C",
-      groupChildren: [
+      groupName: "IV.Kationosztály",
+      groupChildren:[
         {
-          groupChildName: "C1"
+          groupChildName: "Ca<sup>2+</sup>"
         },
         {
-          groupChildName: "C2"
+          groupChildName: "Ba<sup>2+</sup>"
+        }
+      ]
+    },
+    {
+      groupName: "V.Kationosztály",
+      groupChildren:[
+        {
+          groupChildName: "Na<sup>+</sup>"
         },
         {
-          groupChildName: "C3"
+          groupChildName: "K<sup>+</sup>"
         },
         {
-          groupChildName: "C4"
+          groupChildName: "NH<sub>4</sub><sup>+</sup>"
+        },
+        {
+          groupChildName: "Mg<sup>2+</sup>"
         }
       ]
     }
@@ -103,7 +137,6 @@ const App : FC = () =>{
       return;
     }
     const generateNumber = () =>{
-      const min = 1;
       return Math.floor(Math.random() * allChildren.length);
     };
 
@@ -149,7 +182,7 @@ const App : FC = () =>{
                 <input type="checkbox" id={group.groupName} value={group.groupName} onChange={handleCheckChange}/>
                 <ul>
                   {
-                    group.groupChildren.map(child => <li>{child.groupChildName}</li>)
+                    group.groupChildren.map(child => <li dangerouslySetInnerHTML={{__html: child.groupChildName}}></li>)
                   }
                 </ul>
               </div>
@@ -162,7 +195,7 @@ const App : FC = () =>{
           randoms.length > 0 && <h1>Ezt tessék tanulni:</h1>
       }
       {
-        randoms.map(random => <p>{random.groupChildName}</p>)
+        randoms.map(random => <p dangerouslySetInnerHTML={{__html: random.groupChildName}}></p>)
       }
 
     </div>
