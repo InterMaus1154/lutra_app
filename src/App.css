@@ -7,3 +7,21 @@
 img{
   max-width: 100%;
 }
+
+.App{
+  padding: 2rem;
+}
+
+.Checkboxes{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.Checkboxes ul{
+  display: inline-flex;
+  list-style-type: none;
+  gap: 1rem;
+  margin-left: 1rem;
+}
