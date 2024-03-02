@@ -190,7 +190,7 @@ const App : FC = () =>{
         }
       </div>
       <input type="number" value={selectedNumber} onChange={e => setSelectedNumber(parseInt(e.target.value))} min={1}/>
-      <button onClick={generate}>Generate</button>
+      <button onClick={generate}>Csináld!</button>
       {
           randoms.length > 0 && <h1>Ezt tessék tanulni:</h1>
       }
