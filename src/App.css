@@ -4,12 +4,60 @@
   padding: 0;
 }
 
+
 img{
   max-width: 100%;
 }
 
 .App{
   padding: 2rem;
+}
+
+
+.Checkbox-wrapper{
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #111827;
+  padding: 1rem .75rem;
+  font-size: 1.125rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.Checkbox-wrapper button{
+  max-width: 100px;
+  font-size: 1rem;
+  padding: .25rem 1.5rem;
+  margin-left: 1rem;
+}
+
+input[type="checkbox"]{
+  --checkbox-size: 20px;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+}
+
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Scale-selector-wrapper{
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.Scale-selector-wrapper select{
+  border: 1px solid #111827;
+  background-color: #f5f5f5;
+  padding: .25rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .Checkboxes{
@@ -24,12 +72,78 @@ img{
   list-style-type: none;
   gap: 1rem;
   margin-left: 1rem;
+  flex-wrap: wrap;
 }
 
 label{
   margin-right: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input{
+  cursor: pointer;
 }
 
 h1{
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.Number-selector-wrapper{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.Number-selector-wrapper input{
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #111827;
+  padding: .25rem;
+  width: 50%;
+  max-width: 350px;
+}
+
+.Number-selector-wrapper input:focus-visible{
+  outline: 2px solid black;
+}
+
+
+
+button{
+  font-size: 1.25rem;
+  color: #111827;
+  padding: .25rem 1.125rem;
+  font-weight: bold;
+  border: 1px solid #111827;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+}
+
+
+button:hover{
+  color: #f5f5f5;
+  background-color: #111827;
+  border-color: #f5f5f5;
+}
+
+ol{
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+@media(max-width: 768px){
+  .Checkboxes ul{
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }
