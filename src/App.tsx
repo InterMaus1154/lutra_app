@@ -98,6 +98,83 @@ const DEFAULT_GROUPS: IGroup[] = [
                 groupChildName: "Mg<sup>2+</sup>"
             }
         ]
+    },
+    {
+        groupName: "I.Aniosztály",
+        groupChildren: [
+            {
+                groupChildName:"CO<sub>3</sub><sup>2-</sup>"
+            },
+            {
+                groupChildName: "S<sup>2-</sup>"
+            },
+            {
+                groupChildName: "SO<sub>3</sub><sup>2-</sup>"
+            },
+            {
+                groupChildName: "S<sub>2</sub>O<sub>3</sub><sup>2-</sup>"
+            },
+            {
+              groupChildName: "OCl<sup>-</sup>"
+            }
+        ]
+    },
+    {
+        groupName: "II.Aniosztály",
+        groupChildren: [
+            {
+                groupChildName: "B(OH)<sub>4</sub><sup>-</sup>"
+            },
+            {
+                groupChildName: "PO<sub>4</sub><sup>3-</sup>"
+            },
+            {
+                groupChildName: "SO<sub>4</sub><sup>2-</sup>"
+            },
+            {
+                groupChildName: "F<sup>-</sup>"
+            },
+            {
+                groupChildName: "CrO<sub>4</sub><sup>2-</sup>/ Cr<sub>2</sub>O<sub>7</sub><sup>2-</sup>"
+            }
+        ]
+    },
+    {
+        groupName: "III.Aniosztály",
+        groupChildren: [
+            {
+                groupChildName: "Cl<sup>-</sup>"
+            },
+            {
+                groupChildName: "Br<sup>-</sup>"
+            },
+            {
+                groupChildName: "I<sup>-</sup>"
+            },
+            {
+                groupChildName: "CN<sup>-</sup>"
+            },
+            {
+                groupChildName: "SCN<sup>-</sup>"
+            },
+        ]
+    },
+    {
+        groupName: "IV.Aniosztály",
+        groupChildren: [
+            {
+                groupChildName: "NO<sub>2</sub><sup>-</sup>"
+            },
+            {
+                groupChildName: "NO<sub>3</sub><sup>-</sup>"
+            },
+            {
+                groupChildName: "H<sub>2</sub>O<sub>2</sub>"
+            },
+            {
+                groupChildName: "<sup>-</sup>OAc"
+            }
+        ]
     }
 
 ];
@@ -202,7 +279,7 @@ const App: FC = () => {
         <div className={"App"}>
             <div className="Checkboxes">
                 <div className="Header">
-                    <h1>Motorsport:</h1>
+                    <h1>Lutra App</h1>
                     <div className={"Scale-selector-wrapper"}>
                         <label htmlFor={"Select-scale"}>Méret:</label>
                         <select onChange={scaleChange}>
